@@ -8,6 +8,26 @@ package com.mycompany.medidastendenciacentral.git;
  *
  * @author Ernest
  */
-public class Lector {
+public class Lector 
+{
+    Scanner sc = new Scanner(System.in);
+    public int leerEntero(String mensaje)
+    {
+        
+        int aux=0;
+        while (true)
+        {   
+            
+            try
+            {
+              System.out.println(mensaje); 
+              aux=Integer.parseInt(sc.nextLine());
+              return aux;
+            } catch (Exception e)
+            {
+                System.out.println("Error Ingresa un dato numerico");
+            }
+        }
+    }
     
 }
